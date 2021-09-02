@@ -7,6 +7,9 @@ set backspace=indent,eol,start
 " Enable file type detection and do language-dependent indenting
 filetype plugin indent on
 
+" Automatically open NERDTree when Vim opens
+autocmd VimEnter * NERDTree
+
 " Start Vim plugin section
 call plug#begin()
 
@@ -15,5 +18,4 @@ call plug#begin()
 
   " NERDTree plugin
   Plug 'preservim/nerdtree'
-
 call plug#end()
