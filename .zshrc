@@ -8,7 +8,7 @@ export ZSH="/home/lucasvance/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -100,10 +100,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Fix Tilix VTE
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
+# Aliases
 alias "ll"="ls -l"
 alias "la"="ls -A"
 alias "lla"="ls -lA"
-alias "vim"="nvim"
+#alias "vim"="nvim"
 alias "neovim"="nvim"
 alias copy=cp
 alias move=mv
@@ -111,8 +117,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Color script
 # To enable color script, uncomment the following line:
-#colorscript -e crunch
+#colorscript --random
 
 eval "$(starship init zsh)"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
