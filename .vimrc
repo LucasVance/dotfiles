@@ -15,6 +15,8 @@ set cursorline
 
 " Start Vim plugin section
 call plug#begin()
+  " FZF plugin
+  "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
   " Nord theme plugin
   Plug 'arcticicestudio/nord-vim'
@@ -24,6 +26,10 @@ call plug#begin()
 
   " DevIcons plugin
   Plug 'ryanoasis/vim-devicons'
+
+  " lightline.vim plugin
+  Plug 'itchyny/lightline.vim'
+
 call plug#end()
 
 
