@@ -8,7 +8,7 @@ set backspace=indent,eol,start
 filetype plugin indent on
 
 " Enable mouse click
-set mouse=a
+"set mouse=a
 
 " Underline current cursor line
 set cursorline
@@ -23,11 +23,6 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin()
-  " FZF plugin
-  "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-
-  " Nord theme plugin
-  Plug 'arcticicestudio/nord-vim'
 
   " NERDTree plugin
   Plug 'preservim/nerdtree'
@@ -35,8 +30,8 @@ call plug#begin()
   " DevIcons plugin
   Plug 'ryanoasis/vim-devicons'
 
-  " lightline.vim plugin
-  Plug 'itchyny/lightline.vim'
+  " Airline plugin
+  Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
